@@ -1,0 +1,31 @@
+{
+    "name": "webkult/shirtigo-php-api-wrapper",
+    "description": "A PHP wrapper for the Shirtigo API.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benjamin Klein",
+            "email": "b.klein@webkult.de"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "saloonphp/saloon": "^3.0"
+    },
+    "require-dev": {
+        "rector/rector": "^2.2",
+        "pestphp/pest": "*",
+        "jonpurvis/lawman": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webkult\\Api\\Shirtigo\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
