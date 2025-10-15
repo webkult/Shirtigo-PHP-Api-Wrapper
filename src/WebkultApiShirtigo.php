@@ -2,7 +2,9 @@
 
 namespace Webkult\Api\Shirtigo;
 
+use Saloon\Http\Auth\TokenAuthenticator;
 use Saloon\Http\Connector;
+use Saloon\Traits\Auth\AuthenticatesRequests;
 use Webkult\Api\Shirtigo\Resource\BrandingApi;
 use Webkult\Api\Shirtigo\Resource\CatalogApi;
 use Webkult\Api\Shirtigo\Resource\DesignApi;
@@ -28,10 +30,16 @@ use Webkult\Api\Shirtigo\Resource\WebhookApi;
  */
 class WebkultApiShirtigo extends Connector
 {
+
 	public function resolveBaseUrl(): string
 	{
 		return 'https://cockpit.shirtigo.com/api/';
 	}
+
+    protected function defaultAuth(): TokenAuthenticator
+    {
+        return new TokenAuthenticator(config('shirtigo.api_key'));
+    }
 
 
 	public function brandingApi(): BrandingApi
