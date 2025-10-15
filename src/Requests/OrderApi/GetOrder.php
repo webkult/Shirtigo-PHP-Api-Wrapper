@@ -26,10 +26,10 @@ class GetOrder extends Request
 
 
 	/**
-	 * @param mixed $orderReference The unique reference identifier of the order
+	 * @param string $orderReference The unique reference identifier of the order
 	 */
 	public function __construct(
-		protected mixed $orderReference,
+		protected string $orderReference,
 	) {
 	}
 }

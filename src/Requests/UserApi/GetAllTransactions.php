@@ -25,22 +25,22 @@ class GetAllTransactions extends Request
 
 
 	/**
-	 * @param null|mixed $page Page number
-	 * @param null|mixed $items Items per page
-	 * @param null|mixed $search Search query
-	 * @param null|mixed $sortCol Property to order by
-	 * @param null|mixed $sortDir Order direction
-	 * @param null|mixed $period Days to show (default: all)
-	 * @param null|mixed $action Action to filter for (default: none)
+	 * @param null|int $page Page number
+	 * @param null|int $items Items per page
+	 * @param null|string $search Search query
+	 * @param null|string $sortCol Property to order by
+	 * @param null|string $sortDir Order direction
+	 * @param null|int $period Days to show (default: all)
+	 * @param null|string $action Action to filter for (default: none)
 	 */
 	public function __construct(
-		protected mixed $page = null,
-		protected mixed $items = null,
-		protected mixed $search = null,
-		protected mixed $sortCol = null,
-		protected mixed $sortDir = null,
-		protected mixed $period = null,
-		protected mixed $action = null,
+		protected ?int $page = null,
+		protected ?int $items = null,
+		protected ?string $search = null,
+		protected ?string $sortCol = null,
+		protected ?string $sortDir = null,
+		protected ?int $period = null,
+		protected ?string $action = null,
 	) {
 	}
 

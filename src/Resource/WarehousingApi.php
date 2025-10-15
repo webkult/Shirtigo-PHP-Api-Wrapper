@@ -17,41 +17,41 @@ use Webkult\Api\Shirtigo\Resource;
 class WarehousingApi extends Resource
 {
 	/**
-	 * @param mixed $reference Reference of the Variant to be updated
-	 * @param mixed $include Which linked entities you want to include into the response, separated by comma. Available includes are Items
+	 * @param string $reference Reference of the Variant to be updated
+	 * @param string $include Which linked entities you want to include into the response, separated by comma. Available includes are Items
 	 */
-	public function getInboundShipping(mixed $reference, mixed $include): Response
+	public function getInboundShipping(string $reference, string $include): Response
 	{
 		return $this->connector->send(new GetInboundShipping($reference, $include));
 	}
 
 
 	/**
-	 * @param mixed $reference Reference of the InboundShipment to be deleted
+	 * @param string $reference Reference of the InboundShipment to be deleted
 	 */
-	public function deleteInboundShipping(mixed $reference): Response
+	public function deleteInboundShipping(string $reference): Response
 	{
 		return $this->connector->send(new DeleteInboundShipping($reference));
 	}
 
 
 	/**
-	 * @param mixed $include Which linked entities you want to include into the response, separated by comma. Available includes are Image and Product
-	 * @param mixed $search Search in in variants by the name
-	 * @param mixed $page Current page
-	 * @param mixed $items Number of items per page
-	 * @param mixed $sort Column used to sort the results. You can sort by: name, reference, created_at, updated_at
-	 * @param mixed $order Direction for sorting
-	 * @param mixed $type Type of the products to query. Options are warehouse, return and all.
+	 * @param string $include Which linked entities you want to include into the response, separated by comma. Available includes are Image and Product
+	 * @param string $search Search in in variants by the name
+	 * @param int $page Current page
+	 * @param int $items Number of items per page
+	 * @param string $sort Column used to sort the results. You can sort by: name, reference, created_at, updated_at
+	 * @param string $order Direction for sorting
+	 * @param string $type Type of the products to query. Options are warehouse, return and all.
 	 */
 	public function getWarehouseProductVariant(
-		mixed $include,
-		mixed $search,
-		mixed $page,
-		mixed $items,
-		mixed $sort,
-		mixed $order,
-		mixed $type,
+		string $include,
+		string $search,
+		int $page,
+		int $items,
+		string $sort,
+		string $order,
+		string $type,
 	): Response
 	{
 		return $this->connector->send(new GetWarehouseProductVariant($include, $search, $page, $items, $sort, $order, $type));
@@ -59,19 +59,19 @@ class WarehousingApi extends Resource
 
 
 	/**
-	 * @param mixed $reference Reference of the Variant to be updated
-	 * @param mixed $include Which linked entities you want to include into the response, separated by comma. Available includes are Variant and Variants
+	 * @param string $reference Reference of the Variant to be updated
+	 * @param string $include Which linked entities you want to include into the response, separated by comma. Available includes are Variant and Variants
 	 */
-	public function getWarehouseProduct(mixed $reference, mixed $include): Response
+	public function getWarehouseProduct(string $reference, string $include): Response
 	{
 		return $this->connector->send(new GetWarehouseProduct($reference, $include));
 	}
 
 
 	/**
-	 * @param mixed $reference Reference of the WarehouseProduct to be updated
+	 * @param string $reference Reference of the WarehouseProduct to be updated
 	 */
-	public function updateWarehouseProduct(mixed $reference): Response
+	public function updateWarehouseProduct(string $reference): Response
 	{
 		return $this->connector->send(new UpdateWarehouseProduct($reference));
 	}
@@ -84,29 +84,29 @@ class WarehousingApi extends Resource
 
 
 	/**
-	 * @param mixed $productReference Reference of the WarehouseProduct to which the updated Variant belongs to
-	 * @param mixed $reference Reference of the Variant to be updated
+	 * @param string $productReference Reference of the WarehouseProduct to which the updated Variant belongs to
+	 * @param string $reference Reference of the Variant to be updated
 	 */
-	public function updateWarehouseProductVariant(mixed $productReference, mixed $reference): Response
+	public function updateWarehouseProductVariant(string $productReference, string $reference): Response
 	{
 		return $this->connector->send(new UpdateWarehouseProductVariant($productReference, $reference));
 	}
 
 
 	/**
-	 * @param mixed $productReference Reference of the WarehouseProduct to which the deleted Variant belongs to
-	 * @param mixed $reference Reference of the Variant to be deleted
+	 * @param string $productReference Reference of the WarehouseProduct to which the deleted Variant belongs to
+	 * @param string $reference Reference of the Variant to be deleted
 	 */
-	public function deleteWarehouseProductVariant(mixed $productReference, mixed $reference): Response
+	public function deleteWarehouseProductVariant(string $productReference, string $reference): Response
 	{
 		return $this->connector->send(new DeleteWarehouseProductVariant($productReference, $reference));
 	}
 
 
 	/**
-	 * @param mixed $reference Reference of the Variant to be updated
+	 * @param string $reference Reference of the Variant to be updated
 	 */
-	public function updateWarehouseProductVariantByReference(mixed $reference): Response
+	public function updateWarehouseProductVariantByReference(string $reference): Response
 	{
 		return $this->connector->send(new UpdateWarehouseProductVariantByReference($reference));
 	}

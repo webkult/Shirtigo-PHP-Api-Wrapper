@@ -25,16 +25,16 @@ class GetAllProjectsCollections extends Request
 
 
 	/**
-	 * @param null|mixed $page Current page
-	 * @param null|mixed $items Number of items per page
-	 * @param null|mixed $sortCol Column used to sort the results. You can sort by: name, reference, url, default_preview_position, created_at, updated_at
-	 * @param null|mixed $sortDir Direction for sorting
+	 * @param null|int $page Current page
+	 * @param null|int $items Number of items per page
+	 * @param null|string $sortCol Column used to sort the results. You can sort by: name, reference, url, default_preview_position, created_at, updated_at
+	 * @param null|string $sortDir Direction for sorting
 	 */
 	public function __construct(
-		protected mixed $page = null,
-		protected mixed $items = null,
-		protected mixed $sortCol = null,
-		protected mixed $sortDir = null,
+		protected ?int $page = null,
+		protected ?int $items = null,
+		protected ?string $sortCol = null,
+		protected ?string $sortDir = null,
 	) {
 	}
 

@@ -18,11 +18,11 @@ use Webkult\Api\Shirtigo\Resource;
 class ImageApi extends Resource
 {
 	/**
-	 * @param mixed $nImages Number of images to generate
-	 * @param mixed $prompt Prompt for image generation
-	 * @param mixed $styleId ID of prefered MediaStyle
+	 * @param int $nImages Number of images to generate
+	 * @param string $prompt Prompt for image generation
+	 * @param int $styleId ID of prefered MediaStyle
 	 */
-	public function generateMedia(mixed $nImages, mixed $prompt, mixed $styleId): Response
+	public function generateMedia(int $nImages, string $prompt, int $styleId): Response
 	{
 		return $this->connector->send(new GenerateMedia($nImages, $prompt, $styleId));
 	}
@@ -47,20 +47,20 @@ class ImageApi extends Resource
 
 
 	/**
-	 * @param mixed $sortCol Column to sort by (default: created_at)
-	 * @param mixed $sortDir Sort direction (default: desc)
-	 * @param mixed $filteredStatus Comma-separated list of filtered statuses
+	 * @param string $sortCol Column to sort by (default: created_at)
+	 * @param string $sortDir Sort direction (default: desc)
+	 * @param string $filteredStatus Comma-separated list of filtered statuses
 	 */
-	public function getGeneratedMediaList(mixed $sortCol, mixed $sortDir, mixed $filteredStatus): Response
+	public function getGeneratedMediaList(string $sortCol, string $sortDir, string $filteredStatus): Response
 	{
 		return $this->connector->send(new GetGeneratedMediaList($sortCol, $sortDir, $filteredStatus));
 	}
 
 
 	/**
-	 * @param mixed $reference Reference of the generated media
+	 * @param string $reference Reference of the generated media
 	 */
-	public function getGeneratedMediaDetails(mixed $reference): Response
+	public function getGeneratedMediaDetails(string $reference): Response
 	{
 		return $this->connector->send(new GetGeneratedMediaDetails($reference));
 	}
@@ -85,9 +85,9 @@ class ImageApi extends Resource
 
 
 	/**
-	 * @param mixed $reference Unique reference of the rendering task
+	 * @param string $reference Unique reference of the rendering task
 	 */
-	public function getRenderingTaskByReference(mixed $reference): Response
+	public function getRenderingTaskByReference(string $reference): Response
 	{
 		return $this->connector->send(new GetRenderingTaskByReference($reference));
 	}

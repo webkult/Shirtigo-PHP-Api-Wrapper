@@ -26,12 +26,12 @@ class GetAllProducts extends Request
 
 
 	/**
-	 * @param null|mixed $finished Only return products where rendering is finished.
-	 * @param null|mixed $search A search term used to filter on the product and product group (collection) names.
-	 * @param null|mixed $projectId Return only products for a given campaign
-	 * @param null|mixed $designId Return only products which contain a processingarea where the design for the given design_id is used
-	 * @param null|mixed $baseProductId Return which are based on the given base product id
-	 * @param null|mixed $tags Filter for products containing a given tag
+	 * @param null|bool $finished Only return products where rendering is finished.
+	 * @param null|string $search A search term used to filter on the product and product group (collection) names.
+	 * @param null|string $projectId Return only products for a given campaign
+	 * @param null|string $designId Return only products which contain a processingarea where the design for the given design_id is used
+	 * @param null|int $baseProductId Return which are based on the given base product id
+	 * @param null|array $tags Filter for products containing a given tag
 	 */
 	public function __construct(
 		protected ?bool $finished = null,

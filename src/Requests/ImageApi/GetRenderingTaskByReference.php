@@ -27,10 +27,10 @@ class GetRenderingTaskByReference extends Request
 
 
 	/**
-	 * @param mixed $reference Unique reference of the rendering task
+	 * @param string $reference Unique reference of the rendering task
 	 */
 	public function __construct(
-		protected mixed $reference,
+		protected string $reference,
 	) {
 	}
 }

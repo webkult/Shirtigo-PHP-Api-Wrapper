@@ -25,20 +25,20 @@ class AddImageForProductColor extends Request implements HasBody
 
 
 	/**
-	 * @param mixed $productId ID of the product to add image to
-	 * @param null|mixed $url Url
-	 * @param null|mixed $style Style
-	 * @param null|mixed $procesingareaType Processing Area type
-	 * @param null|mixed $name Name
-	 * @param null|mixed $sortWeight Sort weight
+	 * @param int $productId ID of the product to add image to
+	 * @param null|string $url Url
+	 * @param null|string $style Style
+	 * @param null|int $procesingareaType Processing Area type
+	 * @param null|string $name Name
+	 * @param null|int $sortWeight Sort weight
 	 */
 	public function __construct(
-		protected mixed $productId,
-		protected mixed $url = null,
-		protected mixed $style = null,
-		protected mixed $procesingareaType = null,
-		protected mixed $name = null,
-		protected mixed $sortWeight = null,
+		protected int $productId,
+		protected ?string $url = null,
+		protected ?string $style = null,
+		protected ?int $procesingareaType = null,
+		protected ?string $name = null,
+		protected ?int $sortWeight = null,
 	) {
 	}
 

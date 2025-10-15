@@ -35,10 +35,10 @@ class SynchronizeIntegrations extends Request implements HasBody
 
 
 	/**
-	 * @param mixed $projectReference Unique project identifier
+	 * @param string $projectReference Unique project identifier
 	 */
 	public function __construct(
-		protected mixed $projectReference,
+		protected string $projectReference,
 	) {
 	}
 }

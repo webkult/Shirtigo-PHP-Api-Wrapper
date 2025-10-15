@@ -24,14 +24,14 @@ class UpdateOrderProduct extends Request
 
 
 	/**
-	 * @param null|mixed $colorId ID for new color
-	 * @param null|mixed $sizeId ID for new size
-	 * @param null|mixed $replacementRequested Use replacement product in case current Product is not available
+	 * @param null|int $colorId ID for new color
+	 * @param null|int $sizeId ID for new size
+	 * @param null|bool $replacementRequested Use replacement product in case current Product is not available
 	 */
 	public function __construct(
-		protected mixed $colorId = null,
-		protected mixed $sizeId = null,
-		protected mixed $replacementRequested = null,
+		protected ?int $colorId = null,
+		protected ?int $sizeId = null,
+		protected ?bool $replacementRequested = null,
 	) {
 	}
 

@@ -23,10 +23,10 @@ class UpdateWarehouseProductVariantByReference extends Request
 
 
 	/**
-	 * @param mixed $reference Reference of the Variant to be updated
+	 * @param string $reference Reference of the Variant to be updated
 	 */
 	public function __construct(
-		protected mixed $reference,
+		protected string $reference,
 	) {
 	}
 }

@@ -26,10 +26,10 @@ class GetProductsForProjectCollection extends Request
 
 
 	/**
-	 * @param mixed $projectReference Unique project identifier
+	 * @param string $projectReference Unique project identifier
 	 */
 	public function __construct(
-		protected mixed $projectReference,
+		protected string $projectReference,
 	) {
 	}
 }

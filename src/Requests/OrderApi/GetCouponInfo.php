@@ -23,10 +23,10 @@ class GetCouponInfo extends Request
 
 
 	/**
-	 * @param mixed $couponCode Alphanumerical coupon identifier as provided to the customer
+	 * @param string $couponCode Alphanumerical coupon identifier as provided to the customer
 	 */
 	public function __construct(
-		protected mixed $couponCode,
+		protected string $couponCode,
 	) {
 	}
 }

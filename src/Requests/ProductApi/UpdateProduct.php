@@ -23,10 +23,10 @@ class UpdateProduct extends Request
 
 
 	/**
-	 * @param mixed $productId ID of the product to update
+	 * @param int $productId ID of the product to update
 	 */
 	public function __construct(
-		protected mixed $productId,
+		protected int $productId,
 	) {
 	}
 }

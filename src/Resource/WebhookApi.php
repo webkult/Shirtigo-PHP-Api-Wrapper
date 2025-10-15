@@ -15,24 +15,24 @@ use Webkult\Api\Shirtigo\Resource;
 class WebhookApi extends Resource
 {
 	/**
-	 * @param mixed $items Number of items per page
-	 * @param mixed $sortCol Column to sort by
-	 * @param mixed $sortDir Sort direction (asc or desc)
-	 * @param mixed $resource Filter by resource. See WebhookTypes objects for available options.
-	 * @param mixed $action Filter by action. See WebhookTypes objects for available options.
-	 * @param mixed $isActive Filter by active status
-	 * @param mixed $include Comma-separated list of related resources to include in the response. Available resources: type, calls
-	 * @param mixed $loadedWebhookCalls Number of loaded webhook calls when the calls include is used
+	 * @param int $items Number of items per page
+	 * @param string $sortCol Column to sort by
+	 * @param string $sortDir Sort direction (asc or desc)
+	 * @param string $resource Filter by resource. See WebhookTypes objects for available options.
+	 * @param string $action Filter by action. See WebhookTypes objects for available options.
+	 * @param bool $isActive Filter by active status
+	 * @param string $include Comma-separated list of related resources to include in the response. Available resources: type, calls
+	 * @param int $loadedWebhookCalls Number of loaded webhook calls when the calls include is used
 	 */
 	public function indexUserWebhooks(
-		mixed $items,
-		mixed $sortCol,
-		mixed $sortDir,
-		mixed $resource,
-		mixed $action,
-		mixed $isActive,
-		mixed $include,
-		mixed $loadedWebhookCalls,
+		int $items,
+		string $sortCol,
+		string $sortDir,
+		string $resource,
+		string $action,
+		bool $isActive,
+		string $include,
+		int $loadedWebhookCalls,
 	): Response
 	{
 		return $this->connector->send(new IndexUserWebhooks($items, $sortCol, $sortDir, $resource, $action, $isActive, $include, $loadedWebhookCalls));
@@ -46,28 +46,28 @@ class WebhookApi extends Resource
 
 
 	/**
-	 * @param mixed $id The reference ID of the webhook.
-	 * @param mixed $include Comma-separated list of related resources to include in the response. Available resources: type, calls
+	 * @param string $id The reference ID of the webhook.
+	 * @param string $include Comma-separated list of related resources to include in the response. Available resources: type, calls
 	 */
-	public function getSingleWebhookById(mixed $id, mixed $include): Response
+	public function getSingleWebhookById(string $id, string $include): Response
 	{
 		return $this->connector->send(new GetSingleWebhookById($id, $include));
 	}
 
 
 	/**
-	 * @param mixed $id webhook reference
+	 * @param string $id webhook reference
 	 */
-	public function updateUserWebhook(mixed $id): Response
+	public function updateUserWebhook(string $id): Response
 	{
 		return $this->connector->send(new UpdateUserWebhook($id));
 	}
 
 
 	/**
-	 * @param mixed $id Reference of the webhook to delete.
+	 * @param string $id Reference of the webhook to delete.
 	 */
-	public function deleteUserWebhook(mixed $id): Response
+	public function deleteUserWebhook(string $id): Response
 	{
 		return $this->connector->send(new DeleteUserWebhook($id));
 	}
@@ -83,9 +83,9 @@ class WebhookApi extends Resource
 
 
 	/**
-	 * @param mixed $id Reference of the webhook to delete.
+	 * @param string $id Reference of the webhook to delete.
 	 */
-	public function testUserWebhook(mixed $id): Response
+	public function testUserWebhook(string $id): Response
 	{
 		return $this->connector->send(new TestUserWebhook($id));
 	}

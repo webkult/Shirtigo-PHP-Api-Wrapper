@@ -21,10 +21,10 @@ class DeleteProduct extends Request
 
 
 	/**
-	 * @param mixed $productId ID of the product to delete
+	 * @param int $productId ID of the product to delete
 	 */
 	public function __construct(
-		protected mixed $productId,
+		protected int $productId,
 	) {
 	}
 }

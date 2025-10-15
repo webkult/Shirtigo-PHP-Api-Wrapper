@@ -21,27 +21,27 @@ class DesignApi extends Resource
 
 
 	/**
-	 * @param mixed $designReference Unique design identifier
+	 * @param string $designReference Unique design identifier
 	 */
-	public function getDesign(mixed $designReference): Response
+	public function getDesign(string $designReference): Response
 	{
 		return $this->connector->send(new GetDesign($designReference));
 	}
 
 
 	/**
-	 * @param mixed $designReference Unique design identifier
+	 * @param string $designReference Unique design identifier
 	 */
-	public function updateDesign(mixed $designReference): Response
+	public function updateDesign(string $designReference): Response
 	{
 		return $this->connector->send(new UpdateDesign($designReference));
 	}
 
 
 	/**
-	 * @param mixed $designReference Unique design identifier
+	 * @param string $designReference Unique design identifier
 	 */
-	public function deleteDesign(mixed $designReference): Response
+	public function deleteDesign(string $designReference): Response
 	{
 		return $this->connector->send(new DeleteDesign($designReference));
 	}

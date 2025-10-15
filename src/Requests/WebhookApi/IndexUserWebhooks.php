@@ -26,24 +26,24 @@ class IndexUserWebhooks extends Request
 
 
 	/**
-	 * @param null|mixed $items Number of items per page
-	 * @param null|mixed $sortCol Column to sort by
-	 * @param null|mixed $sortDir Sort direction (asc or desc)
-	 * @param null|mixed $resource Filter by resource. See WebhookTypes objects for available options.
-	 * @param null|mixed $action Filter by action. See WebhookTypes objects for available options.
-	 * @param null|mixed $isActive Filter by active status
-	 * @param null|mixed $include Comma-separated list of related resources to include in the response. Available resources: type, calls
-	 * @param null|mixed $loadedWebhookCalls Number of loaded webhook calls when the calls include is used
+	 * @param null|int $items Number of items per page
+	 * @param null|string $sortCol Column to sort by
+	 * @param null|string $sortDir Sort direction (asc or desc)
+	 * @param null|string $resource Filter by resource. See WebhookTypes objects for available options.
+	 * @param null|string $action Filter by action. See WebhookTypes objects for available options.
+	 * @param null|bool $isActive Filter by active status
+	 * @param null|string $include Comma-separated list of related resources to include in the response. Available resources: type, calls
+	 * @param null|int $loadedWebhookCalls Number of loaded webhook calls when the calls include is used
 	 */
 	public function __construct(
-		protected mixed $items = null,
-		protected mixed $sortCol = null,
-		protected mixed $sortDir = null,
-		protected mixed $resource = null,
-		protected mixed $action = null,
-		protected mixed $isActive = null,
-		protected mixed $include = null,
-		protected mixed $loadedWebhookCalls = null,
+		protected ?int $items = null,
+		protected ?string $sortCol = null,
+		protected ?string $sortDir = null,
+		protected ?string $resource = null,
+		protected ?string $action = null,
+		protected ?bool $isActive = null,
+		protected ?string $include = null,
+		protected ?int $loadedWebhookCalls = null,
 	) {
 	}
 

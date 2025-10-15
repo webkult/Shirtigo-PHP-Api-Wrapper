@@ -27,10 +27,10 @@ class TestUserWebhook extends Request implements HasBody
 
 
 	/**
-	 * @param mixed $id Reference of the webhook to delete.
+	 * @param string $id Reference of the webhook to delete.
 	 */
 	public function __construct(
-		protected mixed $id,
+		protected string $id,
 	) {
 	}
 }

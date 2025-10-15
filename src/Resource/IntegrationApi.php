@@ -24,9 +24,9 @@ class IntegrationApi extends Resource
 
 
 	/**
-	 * @param mixed $designReference Unique design identifier
+	 * @param string $designReference Unique design identifier
 	 */
-	public function deleteUserIntegration(mixed $designReference): Response
+	public function deleteUserIntegration(string $designReference): Response
 	{
 		return $this->connector->send(new DeleteUserIntegration($designReference));
 	}
@@ -42,9 +42,9 @@ class IntegrationApi extends Resource
 
 
 	/**
-	 * @param mixed $syncId ID of the campaign product integration sync
+	 * @param int $syncId ID of the campaign product integration sync
 	 */
-	public function translateUserIntegrationSyncError(mixed $syncId): Response
+	public function translateUserIntegrationSyncError(int $syncId): Response
 	{
 		return $this->connector->send(new TranslateUserIntegrationSyncError($syncId));
 	}

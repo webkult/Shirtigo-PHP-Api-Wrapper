@@ -29,10 +29,10 @@ class UpdateDeliveryAddress extends Request implements HasBody
 
 
 	/**
-	 * @param mixed $orderReference The unique reference identifier of the order
+	 * @param string $orderReference The unique reference identifier of the order
 	 */
 	public function __construct(
-		protected mixed $orderReference,
+		protected string $orderReference,
 	) {
 	}
 }

@@ -26,10 +26,10 @@ class UpdateProductMockups extends Request
 
 
 	/**
-	 * @param mixed $projectProductId The unique identifier of the project product
+	 * @param int $projectProductId The unique identifier of the project product
 	 */
 	public function __construct(
-		protected mixed $projectProductId,
+		protected int $projectProductId,
 	) {
 	}
 }
