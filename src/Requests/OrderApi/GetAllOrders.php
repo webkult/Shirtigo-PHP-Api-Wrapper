@@ -26,24 +26,24 @@ class GetAllOrders extends Request
 
 
 	/**
-	 * @param null|mixed $page Page number
-	 * @param null|mixed $filter Filter by order status id
-	 * @param null|mixed $items Items per page
-	 * @param null|mixed $search Search query
-	 * @param null|mixed $sortCol Property to order by
-	 * @param null|mixed $sortDir Order direction
-	 * @param null|mixed $period Days to show (default: all)
-	 * @param null|mixed $secondaryFilter Secondary filter level (e.g. filter reprint orders)
+	 * @param null|int $page Page number
+	 * @param null|int $filter Filter by order status id
+	 * @param null|int $items Items per page
+	 * @param null|string $search Search query
+	 * @param null|string $sortCol Property to order by
+	 * @param null|string $sortDir Order direction
+	 * @param null|int $period Days to show (default: all)
+	 * @param null|string $secondaryFilter Secondary filter level (e.g. filter reprint orders)
 	 */
 	public function __construct(
-		protected mixed $page = null,
-		protected mixed $filter = null,
-		protected mixed $items = null,
-		protected mixed $search = null,
-		protected mixed $sortCol = null,
-		protected mixed $sortDir = null,
-		protected mixed $period = null,
-		protected mixed $secondaryFilter = null,
+		protected ?int $page = null,
+		protected ?int $filter = null,
+		protected ?int $items = null,
+		protected ?string $search = null,
+		protected ?string $sortCol = null,
+		protected ?string $sortDir = null,
+		protected ?int $period = null,
+		protected ?string $secondaryFilter = null,
 	) {
 	}
 

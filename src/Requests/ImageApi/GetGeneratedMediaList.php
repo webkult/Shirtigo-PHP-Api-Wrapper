@@ -21,14 +21,14 @@ class GetGeneratedMediaList extends Request
 
 
 	/**
-	 * @param null|mixed $sortCol Column to sort by (default: created_at)
-	 * @param null|mixed $sortDir Sort direction (default: desc)
-	 * @param null|mixed $filteredStatus Comma-separated list of filtered statuses
+	 * @param null|string $sortCol Column to sort by (default: created_at)
+	 * @param null|string $sortDir Sort direction (default: desc)
+	 * @param null|string $filteredStatus Comma-separated list of filtered statuses
 	 */
 	public function __construct(
-		protected mixed $sortCol = null,
-		protected mixed $sortDir = null,
-		protected mixed $filteredStatus = null,
+		protected ?string $sortCol = null,
+		protected ?string $sortDir = null,
+		protected ?string $filteredStatus = null,
 	) {
 	}
 

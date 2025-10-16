@@ -23,12 +23,12 @@ class GetSingleWebhookById extends Request
 
 
 	/**
-	 * @param mixed $id The reference ID of the webhook.
-	 * @param null|mixed $include Comma-separated list of related resources to include in the response. Available resources: type, calls
+	 * @param string $id The reference ID of the webhook.
+	 * @param null|string $include Comma-separated list of related resources to include in the response. Available resources: type, calls
 	 */
 	public function __construct(
-		protected mixed $id,
-		protected mixed $include = null,
+		protected string $id,
+		protected ?string $include = null,
 	) {
 	}
 

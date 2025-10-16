@@ -23,12 +23,12 @@ class UpdateWarehouseProductVariant extends Request
 
 
 	/**
-	 * @param null|mixed $productReference Reference of the WarehouseProduct to which the updated Variant belongs to
-	 * @param null|mixed $reference Reference of the Variant to be updated
+	 * @param null|string $productReference Reference of the WarehouseProduct to which the updated Variant belongs to
+	 * @param null|string $reference Reference of the Variant to be updated
 	 */
 	public function __construct(
-		protected mixed $productReference = null,
-		protected mixed $reference = null,
+		protected ?string $productReference = null,
+		protected ?string $reference = null,
 	) {
 	}
 }

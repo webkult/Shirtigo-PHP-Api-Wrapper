@@ -23,10 +23,10 @@ class RetrieveOrderInvoice extends Request
 
 
 	/**
-	 * @param mixed $orderReference Unique identifier of the order for which to retrieve the invoice
+	 * @param string $orderReference Unique identifier of the order for which to retrieve the invoice
 	 */
 	public function __construct(
-		protected mixed $orderReference,
+		protected string $orderReference,
 	) {
 	}
 }

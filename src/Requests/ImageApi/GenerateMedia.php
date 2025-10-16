@@ -25,14 +25,14 @@ class GenerateMedia extends Request implements HasBody
 
 
 	/**
-	 * @param null|mixed $nImages Number of images to generate
-	 * @param null|mixed $prompt Prompt for image generation
-	 * @param null|mixed $styleId ID of prefered MediaStyle
+	 * @param null|int $nImages Number of images to generate
+	 * @param null|string $prompt Prompt for image generation
+	 * @param null|int $styleId ID of prefered MediaStyle
 	 */
 	public function __construct(
-		protected mixed $nImages = null,
-		protected mixed $prompt = null,
-		protected mixed $styleId = null,
+		protected ?int $nImages = null,
+		protected ?string $prompt = null,
+		protected ?int $styleId = null,
 	) {
 	}
 

@@ -18,33 +18,35 @@ use Webkult\Api\Shirtigo\Resource;
 class UserApi extends Resource
 {
 	/**
-	 * @param mixed $page Page number
-	 * @param mixed $items Items per page
-	 * @param mixed $search Search query
-	 * @param mixed $sortCol Property to order by
-	 * @param mixed $sortDir Order direction
-	 * @param mixed $period Days to show (default: all)
-	 * @param mixed $action Action to filter for (default: none)
+	 * @param int $page Page number
+	 * @param int $items Items per page
+	 * @param string $search Search query
+	 * @param string $sortCol Property to order by
+	 * @param string $sortDir Order direction
+	 * @param int $period Days to show (default: all)
+	 * @param string $action Action to filter for (default: none)
 	 */
 	public function getAllTransactions(
-		mixed $page,
-		mixed $items,
-		mixed $search,
-		mixed $sortCol,
-		mixed $sortDir,
-		mixed $period,
-		mixed $action,
+		int $page,
+		int $items,
+		string $search,
+		string $sortCol,
+		string $sortDir,
+		int $period,
+		string $action,
 	): Response
 	{
 		return $this->connector->send(new GetAllTransactions($page, $items, $search, $sortCol, $sortDir, $period, $action));
 	}
 
 
-	/**
-     * @param mixed $items Number of items per page
-     * @param mixed $search Search term
+    /**
+     * @param int $items Number of items per page
+     * @param string $search Search term
+     * @param string $sortCol
+     * @param string $sortDir
      */
-    public function getWalletTransactions(mixed $items, mixed $search, mixed $sortCol, mixed $sortDir): Response
+    public function getWalletTransactions(int $items, string $search, string $sortCol, string $sortDir): Response
 	{
 		return $this->connector->send(new GetWalletTransactions($items, $search, $sortCol, $sortDir));
 	}
@@ -87,9 +89,9 @@ class UserApi extends Resource
 
 
 	/**
-	 * @param mixed $include Comma-separated values to include additional resources
+	 * @param string $include Comma-separated values to include additional resources
 	 */
-	public function getUserVerifications(mixed $include): Response
+	public function getUserVerifications(string $include): Response
 	{
 		return $this->connector->send(new GetUserVerifications($include));
 	}

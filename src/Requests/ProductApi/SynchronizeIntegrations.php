@@ -31,10 +31,10 @@ class SynchronizeIntegrations extends Request implements HasBody
 
 
 	/**
-	 * @param mixed $productId Numerical product identifier
+	 * @param int $productId Numerical product identifier
 	 */
 	public function __construct(
-		protected mixed $productId,
+		protected int $productId,
 	) {
 	}
 }

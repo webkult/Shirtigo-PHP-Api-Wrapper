@@ -24,18 +24,18 @@ class CustomizeOrderProduct extends Request
 
 
 	/**
-	 * @param null|mixed $designReference Reference of design
-	 * @param null|mixed $processingareaTypeId Processingarea to be customized. 1 = front, 2 = back
-	 * @param null|mixed $width Width of design in millimeter
-	 * @param null|mixed $offsetTop Offset to collar in millimeter
-	 * @param null|mixed $offsetCenter x-shift to centerline in millimeter
+	 * @param null|string $designReference Reference of design
+	 * @param null|int $processingareaTypeId Processingarea to be customized. 1 = front, 2 = back
+	 * @param null|float $width Width of design in millimeter
+	 * @param null|float $offsetTop Offset to collar in millimeter
+	 * @param null|float $offsetCenter x-shift to centerline in millimeter
 	 */
 	public function __construct(
-		protected mixed $designReference = null,
-		protected mixed $processingareaTypeId = null,
-		protected mixed $width = null,
-		protected mixed $offsetTop = null,
-		protected mixed $offsetCenter = null,
+		protected ?string $designReference = null,
+		protected ?int $processingareaTypeId = null,
+		protected ?float $width = null,
+		protected ?float $offsetTop = null,
+		protected ?float $offsetCenter = null,
 	) {
 	}
 

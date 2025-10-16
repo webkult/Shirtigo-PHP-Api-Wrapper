@@ -24,9 +24,9 @@ class BrandingApi extends Resource
 
 
 	/**
-	 * @param mixed $integrationId Unique integration identifier
+	 * @param int $integrationId Unique integration identifier
 	 */
-	public function deleteDeliveryReceiptLogo(mixed $integrationId): Response
+	public function deleteDeliveryReceiptLogo(int $integrationId): Response
 	{
 		return $this->connector->send(new DeleteDeliveryReceiptLogo($integrationId));
 	}
@@ -39,9 +39,9 @@ class BrandingApi extends Resource
 
 
 	/**
-	 * @param mixed $integrationId Unique integration identifier
+	 * @param int $integrationId Unique integration identifier
 	 */
-	public function deleteStickerLogo(mixed $integrationId): Response
+	public function deleteStickerLogo(int $integrationId): Response
 	{
 		return $this->connector->send(new DeleteStickerLogo($integrationId));
 	}
@@ -66,9 +66,9 @@ class BrandingApi extends Resource
 
 
 	/**
-	 * @param mixed $reference Unique packin reference identifier
+	 * @param string $reference Unique packin reference identifier
 	 */
-	public function getSingleUserPackin(mixed $reference): Response
+	public function getSingleUserPackin(string $reference): Response
 	{
 		return $this->connector->send(new GetSingleUserPackin($reference));
 	}

@@ -27,12 +27,12 @@ class GetBaseProduct extends Request
 
 
 	/**
-	 * @param mixed $baseProductId Numerical base product identifier
-	 * @param null|mixed $includeStock Include stock information for the product
+	 * @param int $baseProductId Numerical base product identifier
+	 * @param null|bool $includeStock Include stock information for the product
 	 */
 	public function __construct(
-		protected mixed $baseProductId,
-		protected mixed $includeStock = null,
+		protected int $baseProductId,
+		protected ?bool $includeStock = null,
 	) {
 	}
 

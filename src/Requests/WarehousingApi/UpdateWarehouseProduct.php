@@ -23,10 +23,10 @@ class UpdateWarehouseProduct extends Request
 
 
 	/**
-	 * @param null|mixed $reference Reference of the WarehouseProduct to be updated
+	 * @param null|string $reference Reference of the WarehouseProduct to be updated
 	 */
 	public function __construct(
-		protected mixed $reference = null,
+		protected ?string $reference = null,
 	) {
 	}
 

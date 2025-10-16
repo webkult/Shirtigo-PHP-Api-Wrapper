@@ -25,12 +25,12 @@ class GetWarehouseProduct extends Request
 
 
 	/**
-	 * @param null|mixed $reference Reference of the Variant to be updated
-	 * @param null|mixed $include Which linked entities you want to include into the response, separated by comma. Available includes are Variant and Variants
+	 * @param null|string $reference Reference of the Variant to be updated
+	 * @param null|string $include Which linked entities you want to include into the response, separated by comma. Available includes are Variant and Variants
 	 */
 	public function __construct(
-		protected mixed $reference = null,
-		protected mixed $include = null,
+		protected ?string $reference = null,
+		protected ?string $include = null,
 	) {
 	}
 

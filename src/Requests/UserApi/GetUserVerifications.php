@@ -23,10 +23,10 @@ class GetUserVerifications extends Request
 
 
 	/**
-	 * @param null|mixed $include Comma-separated values to include additional resources
+	 * @param null|string $include Comma-separated values to include additional resources
 	 */
 	public function __construct(
-		protected mixed $include = null,
+		protected ?string $include = null,
 	) {
 	}
 

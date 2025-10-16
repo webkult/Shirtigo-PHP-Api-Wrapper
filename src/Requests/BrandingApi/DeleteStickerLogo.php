@@ -23,10 +23,10 @@ class DeleteStickerLogo extends Request
 
 
 	/**
-	 * @param null|mixed $integrationId Unique integration identifier
+	 * @param null|int $integrationId Unique integration identifier
 	 */
 	public function __construct(
-		protected mixed $integrationId = null,
+		protected ?int $integrationId = null,
 	) {
 	}
 }

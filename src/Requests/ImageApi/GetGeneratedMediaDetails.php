@@ -21,10 +21,10 @@ class GetGeneratedMediaDetails extends Request
 
 
 	/**
-	 * @param mixed $reference Reference of the generated media
+	 * @param string $reference Reference of the generated media
 	 */
 	public function __construct(
-		protected mixed $reference,
+		protected string $reference,
 	) {
 	}
 }

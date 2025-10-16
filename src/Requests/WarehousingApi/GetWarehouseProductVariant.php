@@ -23,22 +23,22 @@ class GetWarehouseProductVariant extends Request
 
 
 	/**
-	 * @param null|mixed $include Which linked entities you want to include into the response, separated by comma. Available includes are Image and Product
-	 * @param null|mixed $search Search in in variants by the name
-	 * @param null|mixed $page Current page
-	 * @param null|mixed $items Number of items per page
-	 * @param null|mixed $sort Column used to sort the results. You can sort by: name, reference, created_at, updated_at
-	 * @param null|mixed $order Direction for sorting
-	 * @param null|mixed $type Type of the products to query. Options are warehouse, return and all.
+	 * @param null|string $include Which linked entities you want to include into the response, separated by comma. Available includes are Image and Product
+	 * @param null|string $search Search in in variants by the name
+	 * @param null|int $page Current page
+	 * @param null|int $items Number of items per page
+	 * @param null|string $sort Column used to sort the results. You can sort by: name, reference, created_at, updated_at
+	 * @param null|string $order Direction for sorting
+	 * @param null|string $type Type of the products to query. Options are warehouse, return and all.
 	 */
 	public function __construct(
-		protected mixed $include = null,
-		protected mixed $search = null,
-		protected mixed $page = null,
-		protected mixed $items = null,
-		protected mixed $sort = null,
-		protected mixed $order = null,
-		protected mixed $type = null,
+		protected ?string $include = null,
+		protected ?string $search = null,
+		protected ?int $page = null,
+		protected ?int $items = null,
+		protected ?string $sort = null,
+		protected ?string $order = null,
+		protected ?string $type = null,
 	) {
 	}
 

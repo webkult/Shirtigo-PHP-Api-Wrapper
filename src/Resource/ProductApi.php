@@ -18,12 +18,12 @@ use Webkult\Api\Shirtigo\Resource;
 class ProductApi extends Resource
 {
     /**
-     * @param mixed $finished Only return products where rendering is finished.
-     * @param mixed $search A search term used to filter on the product and product group (collection) names.
-     * @param mixed $projectId Return only products for a given campaign
-     * @param mixed $designId Return only products which contain a processingarea where the design for the given design_id is used
-     * @param mixed $baseProductId Return which are based on the given base product id
-     * @param mixed $tags Filter for products containing a given tag
+     * @param bool $finished Only return products where rendering is finished.
+     * @param string $search A search term used to filter on the product and product group (collection) names.
+     * @param string $projectId Return only products for a given campaign
+     * @param string $designId Return only products which contain a processingarea where the design for the given design_id is used
+     * @param int $baseProductId Return which are based on the given base product id
+     * @param array $tags Filter for products containing a given tag
      */
     public function getAllProducts(
         ?bool $finished = null,
@@ -38,46 +38,46 @@ class ProductApi extends Resource
 
 
     /**
-     * @param mixed $productId Numerical product identifier
-     * @param mixed $includeStock Include stock information for the product
+     * @param int $productId Numerical product identifier
+     * @param bool $includeStock Include stock information for the product
      */
-    public function getProduct(mixed $productId, mixed $includeStock): Response
+    public function getProduct(int $productId, bool $includeStock): Response
     {
         return $this->connector->send(new GetProduct($productId, $includeStock));
     }
 
 
     /**
-     * @param mixed $productId ID of the product to update
+     * @param int $productId ID of the product to update
      */
-    public function updateProduct(mixed $productId): Response
+    public function updateProduct(int $productId): Response
     {
         return $this->connector->send(new UpdateProduct($productId));
     }
 
 
     /**
-     * @param mixed $productId ID of the product to delete
+     * @param int $productId ID of the product to delete
      */
-    public function deleteProduct(mixed $productId): Response
+    public function deleteProduct(int $productId): Response
     {
         return $this->connector->send(new DeleteProduct($productId));
     }
 
 
     /**
-     * @param mixed $productId Numerical product identifier
+     * @param int $productId Numerical product identifier
      */
-    public function synchronizeIntegrations(mixed $productId): Response
+    public function synchronizeIntegrations(int $productId): Response
     {
         return $this->connector->send(new SynchronizeIntegrations($productId));
     }
 
 
     /**
-     * @param mixed $productId Numerical product identifier
+     * @param int $productId Numerical product identifier
      */
-    public function synchronizeOnlyProductImages(mixed $productId): Response
+    public function synchronizeOnlyProductImages(int $productId): Response
     {
         return $this->connector->send(new SynchronizeOnlyProductImages($productId));
     }
@@ -96,29 +96,29 @@ class ProductApi extends Resource
 
 
     /**
-     * @param mixed $productId ID of the product to add image to
-     * @param mixed $url Url
-     * @param mixed $style Style
-     * @param mixed $procesingareaType Processing Area type
-     * @param mixed $name Name
-     * @param mixed $sortWeight Sort weight
+     * @param int $productId ID of the product to add image to
+     * @param string $url Url
+     * @param string $style Style
+     * @param int $procesingareaType Processing Area type
+     * @param string $name Name
+     * @param int $sortWeight Sort weight
      */
     public function addImageForProductColor(
-        mixed $productId,
-        mixed $url,
-        mixed $style,
-        mixed $procesingareaType,
-        mixed $name,
-        mixed $sortWeight,
+        int $productId,
+        string $url,
+        string $style,
+        int $procesingareaType,
+        string $name,
+        int $sortWeight,
     ): Response {
         return $this->connector->send(new AddImageForProductColor($productId, $url, $style, $procesingareaType, $name, $sortWeight));
     }
 
 
     /**
-     * @param mixed $projectProductId The unique identifier of the project product
+     * @param int $projectProductId The unique identifier of the project product
      */
-    public function updateProductMockups(mixed $projectProductId): Response
+    public function updateProductMockups(int $projectProductId): Response
     {
         return $this->connector->send(new UpdateProductMockups($projectProductId));
     }

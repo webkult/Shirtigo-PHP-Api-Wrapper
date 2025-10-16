@@ -27,10 +27,10 @@ class TranslateUserIntegrationSyncError extends Request implements HasBody
 
 
 	/**
-	 * @param mixed $syncId ID of the campaign product integration sync
+	 * @param int $syncId ID of the campaign product integration sync
 	 */
 	public function __construct(
-		protected mixed $syncId,
+		protected int $syncId,
 	) {
 	}
 }

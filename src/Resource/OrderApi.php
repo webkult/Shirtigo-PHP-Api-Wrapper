@@ -27,9 +27,9 @@ use Webkult\Api\Shirtigo\Resource;
 class OrderApi extends Resource
 {
 	/**
-	 * @param mixed $couponCode Alphanumerical coupon identifier as provided to the customer
+	 * @param string $couponCode Alphanumerical coupon identifier as provided to the customer
 	 */
-	public function getCouponInfo(mixed $couponCode): Response
+	public function getCouponInfo(string $couponCode): Response
 	{
 		return $this->connector->send(new GetCouponInfo($couponCode));
 	}
@@ -42,24 +42,24 @@ class OrderApi extends Resource
 
 
 	/**
-	 * @param mixed $page Page number
-	 * @param mixed $filter Filter by order status id
-	 * @param mixed $items Items per page
-	 * @param mixed $search Search query
-	 * @param mixed $sortCol Property to order by
-	 * @param mixed $sortDir Order direction
-	 * @param mixed $period Days to show (default: all)
-	 * @param mixed $secondaryFilter Secondary filter level (e.g. filter reprint orders)
+	 * @param int $page Page number
+	 * @param int $filter Filter by order status id
+	 * @param int $items Items per page
+	 * @param string $search Search query
+	 * @param string $sortCol Property to order by
+	 * @param string $sortDir Order direction
+	 * @param int $period Days to show (default: all)
+	 * @param string $secondaryFilter Secondary filter level (e.g. filter reprint orders)
 	 */
 	public function getAllOrders(
-		mixed $page,
-		mixed $filter,
-		mixed $items,
-		mixed $search,
-		mixed $sortCol,
-		mixed $sortDir,
-		mixed $period,
-		mixed $secondaryFilter,
+		int $page,
+		int $filter,
+		int $items,
+		string $search,
+		string $sortCol,
+		string $sortDir,
+		int $period,
+		string $secondaryFilter,
 	): Response
 	{
 		return $this->connector->send(new GetAllOrders($page, $filter, $items, $search, $sortCol, $sortDir, $period, $secondaryFilter));
@@ -73,18 +73,18 @@ class OrderApi extends Resource
 
 
 	/**
-	 * @param mixed $orderReference The unique reference identifier of the order
+	 * @param string $orderReference The unique reference identifier of the order
 	 */
-	public function getOrder(mixed $orderReference): Response
+	public function getOrder(string $orderReference): Response
 	{
 		return $this->connector->send(new GetOrder($orderReference));
 	}
 
 
 	/**
-	 * @param mixed $orderReference The unique reference identifier of the order
+	 * @param string $orderReference The unique reference identifier of the order
 	 */
-	public function updateDeliveryAddress(mixed $orderReference): Response
+	public function updateDeliveryAddress(string $orderReference): Response
 	{
 		return $this->connector->send(new UpdateDeliveryAddress($orderReference));
 	}
@@ -127,54 +127,54 @@ class OrderApi extends Resource
 
 
 	/**
-	 * @param mixed $orderReference The unique reference identifier of the order
+	 * @param string $orderReference The unique reference identifier of the order
 	 */
-	public function retryPayment(mixed $orderReference): Response
+	public function retryPayment(string $orderReference): Response
 	{
 		return $this->connector->send(new RetryPayment($orderReference));
 	}
 
 
 	/**
-	 * @param mixed $orderReference The unique reference identifier of the order
+	 * @param string $orderReference The unique reference identifier of the order
 	 */
-	public function cancelOrder(mixed $orderReference): Response
+	public function cancelOrder(string $orderReference): Response
 	{
 		return $this->connector->send(new CancelOrder($orderReference));
 	}
 
 
 	/**
-	 * @param mixed $orderReference The unique reference identifier of the order
+	 * @param string $orderReference The unique reference identifier of the order
 	 */
-	public function addOrderComment(mixed $orderReference): Response
+	public function addOrderComment(string $orderReference): Response
 	{
 		return $this->connector->send(new AddOrderComment($orderReference));
 	}
 
 
 	/**
-	 * @param mixed $orderReference Unique identifier of the order for which to retrieve the invoice
+	 * @param string $orderReference Unique identifier of the order for which to retrieve the invoice
 	 */
-	public function retrieveOrderInvoice(mixed $orderReference): Response
+	public function retrieveOrderInvoice(string $orderReference): Response
 	{
 		return $this->connector->send(new RetrieveOrderInvoice($orderReference));
 	}
 
 
 	/**
-	 * @param mixed $designReference Reference of design
-	 * @param mixed $processingareaTypeId Processingarea to be customized. 1 = front, 2 = back
-	 * @param mixed $width Width of design in millimeter
-	 * @param mixed $offsetTop Offset to collar in millimeter
-	 * @param mixed $offsetCenter x-shift to centerline in millimeter
+	 * @param string $designReference Reference of design
+	 * @param int $processingareaTypeId Processingarea to be customized. 1 = front, 2 = back
+	 * @param float $width Width of design in millimeter
+	 * @param float $offsetTop Offset to collar in millimeter
+	 * @param float $offsetCenter x-shift to centerline in millimeter
 	 */
 	public function customizeOrderProduct(
-		mixed $designReference,
-		mixed $processingareaTypeId,
-		mixed $width,
-		mixed $offsetTop,
-		mixed $offsetCenter,
+		string $designReference,
+		int $processingareaTypeId,
+		float $width,
+		float $offsetTop,
+		float $offsetCenter,
 	): Response
 	{
 		return $this->connector->send(new CustomizeOrderProduct($designReference, $processingareaTypeId, $width, $offsetTop, $offsetCenter));
@@ -182,11 +182,11 @@ class OrderApi extends Resource
 
 
 	/**
-	 * @param mixed $colorId ID for new color
-	 * @param mixed $sizeId ID for new size
-	 * @param mixed $replacementRequested Use replacement product in case current Product is not available
+	 * @param int $colorId ID for new color
+	 * @param int $sizeId ID for new size
+	 * @param bool $replacementRequested Use replacement product in case current Product is not available
 	 */
-	public function updateOrderProduct(mixed $colorId, mixed $sizeId, mixed $replacementRequested): Response
+	public function updateOrderProduct(int $colorId, int $sizeId, bool $replacementRequested): Response
 	{
 		return $this->connector->send(new UpdateOrderProduct($colorId, $sizeId, $replacementRequested));
 	}

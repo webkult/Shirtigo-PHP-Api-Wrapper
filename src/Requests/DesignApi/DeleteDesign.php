@@ -23,10 +23,10 @@ class DeleteDesign extends Request
 
 
 	/**
-	 * @param mixed $designReference Unique design identifier
+	 * @param string $designReference Unique design identifier
 	 */
 	public function __construct(
-		protected mixed $designReference,
+		protected string $designReference,
 	) {
 	}
 }

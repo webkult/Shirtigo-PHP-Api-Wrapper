@@ -24,14 +24,14 @@ class GetAllBaseProducts extends Request
 
 
 	/**
-	 * @param null|mixed $category Filter by category identifier (default: any)
-	 * @param null|mixed $userProductsOnly Include user specific products
-	 * @param null|mixed $sku Filter products with a variant which contains a variant where either the sku or internal_sku contains the passed value
+	 * @param null|int $category Filter by category identifier (default: any)
+	 * @param null|bool $userProductsOnly Include user specific products
+	 * @param null|string $sku Filter products with a variant which contains a variant where either the sku or internal_sku contains the passed value
 	 */
 	public function __construct(
-		protected mixed $category = null,
-		protected mixed $userProductsOnly = null,
-		protected mixed $sku = null,
+		protected ?int $category = null,
+		protected ?bool $userProductsOnly = null,
+		protected ?string $sku = null,
 	) {
 	}
 

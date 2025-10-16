@@ -27,16 +27,16 @@ class ObtainAuthorizationFromUser extends Request
 
 
 	/**
-	 * @param mixed $responseType Response type
-	 * @param mixed $redirectUrl Redirect URL. Must match registered redirect URL.
-	 * @param mixed $clientId Client ID (from registration)
-	 * @param mixed $clientSecret Client Secret (from registration)
+	 * @param string $responseType Response type
+	 * @param string $redirectUrl Redirect URL. Must match registered redirect URL.
+	 * @param string $clientId Client ID (from registration)
+	 * @param string $clientSecret Client Secret (from registration)
 	 */
 	public function __construct(
-		protected mixed $responseType,
-		protected mixed $redirectUrl,
-		protected mixed $clientId,
-		protected mixed $clientSecret,
+		protected string $responseType,
+		protected string $redirectUrl,
+		protected string $clientId,
+		protected string $clientSecret,
 	) {
 	}
 

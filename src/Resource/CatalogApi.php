@@ -11,21 +11,21 @@ use Webkult\Api\Shirtigo\Resource;
 class CatalogApi extends Resource
 {
 	/**
-	 * @param mixed $category Filter by category identifier (default: any)
-	 * @param mixed $userProductsOnly Include user specific products
-	 * @param mixed $sku Filter products with a variant which contains a variant where either the sku or internal_sku contains the passed value
+	 * @param int $category Filter by category identifier (default: any)
+	 * @param bool $userProductsOnly Include user specific products
+	 * @param string $sku Filter products with a variant which contains a variant where either the sku or internal_sku contains the passed value
 	 */
-	public function getAllBaseProducts(mixed $category, mixed $userProductsOnly, mixed $sku): Response
+	public function getAllBaseProducts(int $category, bool $userProductsOnly, string $sku): Response
 	{
 		return $this->connector->send(new GetAllBaseProducts($category, $userProductsOnly, $sku));
 	}
 
 
 	/**
-	 * @param mixed $baseProductId Numerical base product identifier
-	 * @param mixed $includeStock Include stock information for the product
+	 * @param int $baseProductId Numerical base product identifier
+	 * @param bool $includeStock Include stock information for the product
 	 */
-	public function getBaseProduct(mixed $baseProductId, mixed $includeStock): Response
+	public function getBaseProduct(int $baseProductId, bool $includeStock): Response
 	{
 		return $this->connector->send(new GetBaseProduct($baseProductId, $includeStock));
 	}

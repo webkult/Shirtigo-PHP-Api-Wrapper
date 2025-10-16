@@ -21,16 +21,16 @@ class GetWalletTransactions extends Request
 
 
 	/**
-	 * @param null|mixed $items Number of items per page
-	 * @param null|mixed $search Search term
-	 * @param null|mixed $sortCol
-	 * @param null|mixed $sortDir
+	 * @param null|int $items Number of items per page
+	 * @param null|string $search Search term
+	 * @param null|string $sortCol
+	 * @param null|string $sortDir
 	 */
 	public function __construct(
-		protected mixed $items = null,
-		protected mixed $search = null,
-		protected mixed $sortCol = null,
-		protected mixed $sortDir = null,
+		protected ?int $items = null,
+		protected ?string $search = null,
+		protected ?string $sortCol = null,
+		protected ?string $sortDir = null,
 	) {
 	}
 

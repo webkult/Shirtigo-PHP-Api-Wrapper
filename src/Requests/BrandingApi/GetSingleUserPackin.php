@@ -23,10 +23,10 @@ class GetSingleUserPackin extends Request
 
 
 	/**
-	 * @param mixed $reference Unique packin reference identifier
+	 * @param string $reference Unique packin reference identifier
 	 */
 	public function __construct(
-		protected mixed $reference,
+		protected string $reference,
 	) {
 	}
 }

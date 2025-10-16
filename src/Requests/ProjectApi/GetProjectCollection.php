@@ -25,12 +25,12 @@ class GetProjectCollection extends Request
 
 
 	/**
-	 * @param mixed $projectReference Unique project identifier
-	 * @param null|mixed $includeStock Include stock information for the products
+	 * @param string $projectReference Unique project identifier
+	 * @param null|bool $includeStock Include stock information for the products
 	 */
 	public function __construct(
-		protected mixed $projectReference,
-		protected mixed $includeStock = null,
+		protected string $projectReference,
+		protected ?bool $includeStock = null,
 	) {
 	}
 
